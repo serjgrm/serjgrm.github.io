@@ -1,0 +1,125 @@
+@media (max-width: 1300px) {
+    .container {
+        max-width: 960px;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .about {
+        .about-grid {
+            row-gap: 10px;
+            .about__skills {
+                grid-template: 1fr 1fr / 1fr;
+                gap: 24px;
+            }
+        }
+
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template: repeat(2, 280px) /repeat(3, 280px);
+            justify-content: space-between;
+            row-gap: 50px;
+        }
+        &__item {
+            img {
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+            }
+            &__descr{
+                width: 280px;
+                font-size: 12px;
+                height: 220px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .promo {
+        &__title {
+            font-size: 38px;
+        }
+    }
+    .about {
+        .about-grid {
+            .about__photo {
+                grid-row: unset;
+            }
+            .about__name {
+                margin-top: 30px;
+                grid-row: 2;
+            }
+            .about__skills {
+                grid-row: 3;
+                margin-top: 30px;
+            }
+            grid-template: 500px auto auto / 1fr;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template: repeat(2, 280px)/repeat(2, 280px);
+            justify-content: space-around;
+        }
+        &__item{
+            img{
+                height: 270px;
+                width: 270px;
+            }
+            &__descr{
+                left: -10px;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .portfolio {
+        &__wrapper {
+            row-gap: 5px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .promo {
+        &__title {
+            width: 100%;
+            font-size: 25px;
+            line-height: 31px;
+        }
+    }
+    .resume {
+        &__subtitle {
+            font-size: 30px;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template: auto/ 280px;
+        }
+    }
+    .footer__link{
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

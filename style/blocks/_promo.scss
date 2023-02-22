@@ -1,0 +1,67 @@
+ .promo{
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/BG_1.jpeg') no-repeat 50%/ cover;
+    padding-top: 205px;
+    &__title{
+      width: 535px;
+      margin-top: 10px;
+      animation: promoTitleAppearance 1.7s ease-in-out 1;
+
+    }
+    &__btns{
+      margin-top: 25px;
+      display: flex;
+      width: 250px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__subtitle{
+      z-index: 2;
+      padding-left: 10px;
+      position: relative;
+      animation: promoSubtitleAppearance 1.7s ease-in-out 1;
+      @include before_circle;
+    }
+    &__lang{
+      top: 10px;
+      right: 10px;
+      position: fixed;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s all ;
+      z-index: 10;
+    }
+    @keyframes promoTitleAppearance {
+      from {
+        transform: translateY(-100px);
+      }
+      50%{
+        transform: translateY(20px);
+      }
+      75%{
+        transform: translateY(-10px);
+      }
+      to{
+        transform: translateY(0);
+      }
+    }  
+    @keyframes promoSubtitleAppearance {
+      from {
+        transform: translateY(100px);
+      }
+      50%{
+        transform: translateY(-20px);
+      }
+      75%{
+        transform: translateY(10px);
+      }
+      to{
+        transform: translateY(0);
+      }
+    }  
+ }
+
+
+ 
+

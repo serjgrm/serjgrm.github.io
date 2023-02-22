@@ -1,0 +1,20 @@
+.footer{
+    padding-top: 60px;
+    background-color: rgba(255, 149, 0,0.3);
+    &__wrapper{
+        width: 33%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__GH{
+        transform: translateY(-4px) rotate(90deg);
+    }
+    &__link{
+        &:hover{
+            svg path{
+                fill:#1E90FF	;
+            }
+        }
+    }
+}

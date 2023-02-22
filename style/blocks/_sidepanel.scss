@@ -1,0 +1,23 @@
+.sidepanel{
+    position: fixed;
+    top: 230px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+    z-index: 3;
+    align-items: center;
+    &__linkedin{
+        transform: rotate(-90deg);
+        position: relative;
+        left: 4px
+    }
+    &__link{
+        &:hover{
+            svg path{
+                fill:#1E90FF	;
+            }
+        }
+    }
+}

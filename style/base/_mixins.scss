@@ -1,0 +1,48 @@
+@mixin before_circle{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 10px;
+    &:before {
+        content:'';
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        left: 0;
+        top: -7px;
+    }
+}
+@mixin divider{
+    width: 60px;
+    height: 2px;
+    background-color: $main_color;
+}
+@mixin before_circle_center{
+    &:before {
+        content:'';
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        left: 50%;
+        transform: translate(-50%,-13%) ;
+    }
+}
+@mixin circle{
+    &:before {
+        content:'';
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        top: -15%;
+        left: -33%;
+    }
+}
