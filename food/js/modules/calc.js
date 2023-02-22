@@ -107,7 +107,6 @@ active = 1.375;
                 }
             }
             res();
-
         });
     };
     calcToggle(gender, genderChildren);

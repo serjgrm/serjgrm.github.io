@@ -1,6 +1,6 @@
 function timer (){
     function timerFill (){
-        const timeRemain = new Date('2022-10-12').getTime() - new Date().getTime();
+        const timeRemain = new Date('2023-05-31').getTime() - new Date().getTime();
         document.querySelector("#days").textContent = Math.floor((timeRemain / (1000 * 60 * 60 * 24))),
         document.querySelector('#hours').textContent = Math.floor((timeRemain / (1000 * 60 * 60) % 24)),
         document.querySelector('#minutes').textContent = Math.floor((timeRemain / (1000 / 60)) % 60),
