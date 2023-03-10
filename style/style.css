@@ -16,6 +16,10 @@
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 .en {
   animation: langShift 1s ease-in 1;
 }
@@ -267,6 +271,7 @@
   text-align: center;
 }
 .portfolio__wrapper {
+  padding-top: 70px;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -276,22 +281,19 @@
 .portfolio__item {
   text-decoration: none;
 }
-.portfolio__item:hover .portfolio__item__descr {
-  opacity: 1;
-  transform: translateY(-10px);
-}
 .portfolio__item img {
   width: 373px;
   height: 373px;
   object-fit: cover;
   border-radius: 5%;
-  transition: all 0.6s;
+  transition: all 0.7s;
+  z-index: 5;
 }
 .portfolio__item img:hover {
   transform: scale(1.04);
 }
 .portfolio__item__descr {
-  transition: all 0.6s;
+  display: none;
   background-color: rgb(234, 164, 94);
   border-radius: 5%;
   padding: 5px;
@@ -300,13 +302,15 @@
   color: black;
   text-align: left;
   font-size: 16px;
-  opacity: 0;
-  vertical-align: center;
+  opacity: 1;
   z-index: 1000;
   width: 373px;
   height: 260px;
-  position: relative;
+  position: absolute;
   top: 50px;
+}
+.portfolio__item__descr_marvel {
+  top: 400px;
 }
 .portfolio__item__descr_title {
   display: block;
@@ -393,6 +397,19 @@
   .portfolio__item__descr {
     left: -10px;
   }
+  .portfolio__item__descr_uber {
+    left: 26px;
+  }
+  .portfolio__item__descr_food {
+    left: 400px;
+  }
+  .portfolio__item__descr_marvel {
+    left: 400px;
+  }
+  .portfolio__item__descr_crud {
+    top: 400px;
+    left: 26px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -400,6 +417,20 @@
   }
   .portfolio__wrapper {
     row-gap: 5px;
+  }
+  .portfolio__item__descr_uber {
+    left: -25px;
+  }
+  .portfolio__item__descr_food {
+    left: 260px;
+  }
+  .portfolio__item__descr_marvel {
+    left: -25px;
+    top: 300px;
+  }
+  .portfolio__item__descr_crud {
+    top: 300px;
+    left: 260px;
   }
 }
 @media (max-width: 576px) {
@@ -418,8 +449,33 @@
   .portfolio__wrapper {
     grid-template: auto/280px;
   }
+  .portfolio__item__descr_uber {
+    left: 50%;
+    transform: translateX(-53%);
+  }
+  .portfolio__item__descr_food {
+    left: 50%;
+    transform: translateX(-53%);
+    top: 350px;
+  }
+  .portfolio__item__descr_crud {
+    left: 50%;
+    transform: translateX(-53%);
+    top: 650px;
+  }
+  .portfolio__item__descr_marvel {
+    left: 50%;
+    transform: translateX(-53%);
+    top: 900px;
+  }
   .footer__link svg {
     width: 20px;
     height: 20px;
+  }
+  .about .about-grid {
+    grid-template: auto auto/1fr;
+  }
+  .about .about-grid .about__photo {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -36,14 +36,28 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
     window.addEventListener('scroll',hideLinks);
 
-    // Portfolio description 
-    // const portfolioItem = document.querySelector('.portfolio__item'),
-    //       portfolioDescription = document.querySelector('.portfolio__subitem');
 
-    // portfolioItem.addEventListener('mouseover',()=>{
-    //     portfolioDescription.classList.remove('hide')
-    // })
-   
+    // Portfolio description 
+
+    const portfolioItems = document.querySelectorAll('.portfolio__item'),
+          portfolioItemDescriptions = document.querySelectorAll('.portfolio__item__descr');
+
+    portfolioItems.forEach((item,i)=>{
+        item.addEventListener('mouseover',()=>{
+            portfolioItemDescriptions[i].style.display='block';
+            portfolioItemDescriptions[i].style.opacity='1'
+        })
+    })
+
+    portfolioItems.forEach((item,i)=>{
+        item.addEventListener('mouseout',()=>{
+            portfolioItemDescriptions[i].style.display='none'
+            portfolioItemDescriptions[i].style.opacity='0'
+        })
+    })
+
+
+
 
 
 

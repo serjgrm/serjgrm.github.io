@@ -14,6 +14,7 @@
         text-align: center;
     }
     &__wrapper{
+        padding-top: 70px;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -22,24 +23,19 @@
     }
     &__item{
         text-decoration: none;
-        &:hover{
-            .portfolio__item__descr{
-                opacity: 1;
-                transform: translateY(-10px);
-            }
-        }
         img {
             width: 373px;
             height: 373px;
             object-fit: cover;
             border-radius: 5%;
-            transition: all 0.6s;
+            transition: all .7s;
+            z-index: 5;
             &:hover{
                 transform: scale(1.04);
             }
         }
         &__descr{
-            transition: all 0.6s;
+            display: none;
             background-color: rgb(234, 164, 94);
             border-radius: 5%;
             padding: 5px;
@@ -48,13 +44,15 @@
             color: black;
             text-align: left;
             font-size: 16px;
-            opacity: 0;
-            vertical-align: center;
+            opacity: 1;
             z-index: 1000;
             width: 373px;
             height: 260px;
-            position: relative;
+            position: absolute;
             top: 50px;
+            &_marvel{
+                top:400px
+            }
             &_title{
                 display: block;
                 text-align: center;

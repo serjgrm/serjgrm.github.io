@@ -75,6 +75,19 @@
             }
             &__descr{
                 left: -10px;
+                &_uber{
+                    left: 26px;
+                }
+                &_food{
+                    left: 400px;
+                }
+                &_marvel{
+                    left: 400px;
+                }
+                &_crud{
+                    top: 400px;
+                    left: 26px;
+                }
             }
         }
     }
@@ -89,6 +102,22 @@
     .portfolio {
         &__wrapper {
             row-gap: 5px;
+        }
+        &__item__descr{
+            &_uber{
+                left: -25px;
+            }
+            &_food{
+                left: 260px;
+            }
+            &_marvel{
+                left: -25px;
+                top: 300px;
+            }
+            &_crud{
+                top: 300px;
+                left: 260px;
+            }
         }
     }
 }
@@ -115,11 +144,40 @@
         &__wrapper {
             grid-template: auto/ 280px;
         }
+        &__item__descr{
+            &_uber{
+                left: 50%;
+                transform: translateX(-53%);
+            }
+            &_food{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 350px;
+            }
+            &_crud{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 650px;
+            }
+            &_marvel{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 900px;
+            }
+        }
     }
     .footer__link{
         svg{
             width: 20px;
             height: 20px;
+        }
+    }
+    .about{
+        .about-grid{
+            grid-template: auto auto/1fr;
+            .about__photo{
+                display: none;
+            }
         }
     }
 }
