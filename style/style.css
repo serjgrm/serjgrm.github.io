@@ -297,14 +297,6 @@ body {
   text-decoration: none;
   transition: all 1s;
 }
-.portfolio__item-link {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  position: absolute;
-  top: 30%;
-}
 .portfolio__item img {
   width: 373px;
   height: 373px;
