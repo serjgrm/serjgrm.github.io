@@ -32,6 +32,19 @@
                 width: 280px;
                 font-size: 12px;
                 height: 220px;
+                &_uber{
+                    left: -5px;
+                }
+                &_food{
+                    left: 335px;
+                }
+                &_crud{
+                    left: 676px;
+                }
+                &_marvel{
+                    left: -5px;
+                }
+                
             }
         }
     }
@@ -105,18 +118,18 @@
         }
         &__item__descr{
             &_uber{
-                left: -25px;
+                left: -26px;
             }
             &_food{
-                left: 260px;
+                left: 265px;
             }
             &_marvel{
-                left: -25px;
+                left: 265px;
                 top: 300px;
             }
             &_crud{
                 top: 300px;
-                left: 260px;
+                left: -26px;
             }
         }
     }

@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  transition: all 1s;
+}
+
 .container {
   width: 1140px;
   margin: 0 auto;
@@ -247,11 +251,21 @@
   background-image: radial-gradient(circle closest-side at 82vw 24vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0, 0.3) 100%);
   min-height: 1220px;
 }
+.portfolio [data-tech] {
+  cursor: pointer;
+}
+.portfolio [data-tech]:hover {
+  color: #1E90FF;
+}
 .portfolio .divider {
   width: 60px;
   height: 2px;
   background-color: rgba(255, 136, 0, 0.7);
   margin: 0 auto;
+}
+.portfolio .technologies {
+  margin-top: 50px;
+  font-size: 20px;
 }
 .portfolio__title {
   text-align: center;
@@ -279,7 +293,17 @@
   gap: 15px;
 }
 .portfolio__item {
+  cursor: pointer;
   text-decoration: none;
+  transition: all 1s;
+}
+.portfolio__item-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 30%;
 }
 .portfolio__item img {
   width: 373px;
@@ -302,15 +326,23 @@
   color: black;
   text-align: left;
   font-size: 16px;
-  opacity: 1;
   z-index: 1000;
   width: 373px;
   height: 260px;
   position: absolute;
   top: 50px;
+  opacity: 0;
+  transition: all 1s;
+  cursor: pointer;
 }
 .portfolio__item__descr_marvel {
   top: 400px;
+}
+.portfolio__item__descr_food {
+  left: 382px;
+}
+.portfolio__item__descr_crud {
+  left: 770px;
 }
 .portfolio__item__descr_title {
   display: block;
@@ -363,6 +395,18 @@
     width: 280px;
     font-size: 12px;
     height: 220px;
+  }
+  .portfolio__item__descr_uber {
+    left: -5px;
+  }
+  .portfolio__item__descr_food {
+    left: 335px;
+  }
+  .portfolio__item__descr_crud {
+    left: 676px;
+  }
+  .portfolio__item__descr_marvel {
+    left: -5px;
   }
 }
 @media (max-width: 992px) {
@@ -419,18 +463,18 @@
     row-gap: 5px;
   }
   .portfolio__item__descr_uber {
-    left: -25px;
+    left: -26px;
   }
   .portfolio__item__descr_food {
-    left: 260px;
+    left: 265px;
   }
   .portfolio__item__descr_marvel {
-    left: -25px;
+    left: 265px;
     top: 300px;
   }
   .portfolio__item__descr_crud {
     top: 300px;
-    left: 260px;
+    left: -26px;
   }
 }
 @media (max-width: 576px) {
