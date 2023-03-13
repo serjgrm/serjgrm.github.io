@@ -55,6 +55,7 @@ window.addEventListener('DOMContentLoaded',()=>{
           sass = document.querySelector('[data-tech="sass"]'),
           scss = document.querySelector('[data-tech="scss"]'),
           git = document.querySelector('[data-tech="git"]'),
+          BEM = document.querySelector('[data-tech="BEM"]'),
           bootstrap = document.querySelector('[data-tech="bootstrap"]'),
           responsiveCreation = document.querySelector('[data-tech="responsive-creation"]'),
           photoshop = document.querySelector('[data-tech="photoshop"]'),
@@ -78,24 +79,26 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
-            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents];
+            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM];
 
-    const techUber = ['bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
-          techFood = ['photoshop','js','webpack','html','css','responsive-creation','sass','flex', 'git','figma','ajax'],
+    const techUber = ['BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
+          techFood = ['BEM','photoshop','js','webpack','html','css','responsive-creation','sass','flex', 'git','figma','ajax'],
           techCRUD = ['css','git','js','react','CRA','CRUD','class-components','jsx','setState','responsive-creation'],
-          techMarvel = ['setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
+          techMarvel = ['scss','setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
           'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'];
 
     const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel]; 
             
-
-
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'
+        item.style.filter = 'grayscale(1)'
+
     }
     const hideItem = (item,i) => {
         item.style.transform = 'scale(1)'
+        item.style.filter = 'grayscale(0)'
     }
+
     allTech.forEach(itemAll=>{
         itemAll.addEventListener('mouseover',()=>{
             portfolioItemTechs.forEach((itemPort,i)=>{

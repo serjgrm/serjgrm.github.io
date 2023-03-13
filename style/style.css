@@ -514,4 +514,7 @@ body {
   .about .about-grid .about__photo {
     display: none;
   }
+  .technologies {
+    padding: 0 5vw;
+  }
 }/*# sourceMappingURL=style.css.map */
