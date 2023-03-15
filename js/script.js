@@ -75,19 +75,22 @@ window.addEventListener('DOMContentLoaded',()=>{
           customHooks = document.querySelector('[data-tech="custom-hooks"]'),
           reactRouter = document.querySelector('[data-tech="react-router"]'),
           reactHelmet = document.querySelector('[data-tech="react-helmet"]'),
-          finiteStateMachine = document.querySelector('[data-tech="finite-state-machine"]');
+          finiteStateMachine = document.querySelector('[data-tech="finite-state-machine"]'),
+          jQuery = document.querySelector('[data-tech="jQuery"]');
+
 
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
-            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM];
+            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery];
 
     const techUber = ['BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
           techFood = ['BEM','photoshop','js','webpack','html','css','responsive-creation','sass','flex', 'git','figma','ajax'],
           techCRUD = ['css','git','js','react','CRA','CRUD','class-components','jsx','setState','responsive-creation'],
           techMarvel = ['scss','setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
-          'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'];
+          'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'],
+          techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy']
 
-    const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel]; 
+    const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel,techPuls]; 
             
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'

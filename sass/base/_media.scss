@@ -44,6 +44,10 @@
                 &_marvel{
                     left: -5px;
                 }
+                &_puls{
+                    left: 335px;
+
+                }
                 
             }
         }
@@ -101,6 +105,10 @@
                     top: 400px;
                     left: 26px;
                 }
+                &_puls{
+                    left: 26px;
+                    top: 700px;
+                }
             }
         }
     }
@@ -130,6 +138,10 @@
             &_crud{
                 top: 300px;
                 left: -26px;
+            }
+            &_puls{
+                left: -26px;
+                top: 600px
             }
         }
     }
@@ -176,6 +188,11 @@
                 left: 50%;
                 transform: translateX(-53%);
                 top: 900px;
+            }
+            &_puls{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 1200px;
             }
         }
     }
