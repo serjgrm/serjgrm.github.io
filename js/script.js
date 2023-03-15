@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded',()=>{
           techCRUD = ['css','git','js','react','CRA','CRUD','class-components','jsx','setState','responsive-creation'],
           techMarvel = ['scss','setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
           'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'],
-          techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy']
+          techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy']
 
     const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel,techPuls]; 
             
