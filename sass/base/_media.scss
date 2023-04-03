@@ -17,6 +17,9 @@
     }
 
     .portfolio {
+        .card{
+            width: 280px;
+        }
         &__wrapper {
             grid-template: repeat(2, 280px) /repeat(3, 280px);
             justify-content: space-between;
@@ -46,9 +49,11 @@
                 }
                 &_puls{
                     left: 335px;
-
                 }
-                
+                &_chess{
+                    left: 676px;
+                }
+              
             }
         }
     }
@@ -81,6 +86,7 @@
         }
     }
     .portfolio {
+
         &__wrapper {
             grid-template: repeat(2, 280px)/repeat(2, 280px);
             justify-content: space-around;
@@ -108,6 +114,11 @@
                 &_puls{
                     left: 26px;
                     top: 700px;
+                }
+                &_chess{
+                    left: 400px;
+                    top: 700px;
+
                 }
             }
         }
@@ -143,9 +154,14 @@
                 left: -26px;
                 top: 600px
             }
+            &_chess{
+                left: 265px;
+                top: 600px
+            }
         }
     }
 }
+
 
 @media (max-width: 576px) {
     .container {
@@ -193,6 +209,11 @@
                 left: 50%;
                 transform: translateX(-53%);
                 top: 1200px;
+            }
+            &_chess{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 1400px;
             }
         }
     }

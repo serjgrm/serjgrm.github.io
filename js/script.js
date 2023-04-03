@@ -76,61 +76,61 @@ window.addEventListener('DOMContentLoaded',()=>{
           reactRouter = document.querySelector('[data-tech="react-router"]'),
           reactHelmet = document.querySelector('[data-tech="react-helmet"]'),
           finiteStateMachine = document.querySelector('[data-tech="finite-state-machine"]'),
-          jQuery = document.querySelector('[data-tech="jQuery"]');
+          jQuery = document.querySelector('[data-tech="jQuery"]'),
+          typeScript = document.querySelector('[data-tech="typeScript"]'),
+          OOP = document.querySelector('[data-tech="OOP"]');
 
 
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
-            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery];
+            reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery,typeScript,
+            OOP
+        ];
 
     const techUber = ['BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
           techFood = ['BEM','photoshop','js','webpack','html','css','responsive-creation','sass','flex', 'git','figma','ajax'],
           techCRUD = ['css','git','js','react','CRA','CRUD','class-components','jsx','setState','responsive-creation'],
           techMarvel = ['scss','setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
           'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'],
-          techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy']
+          techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy'],
+          techChess = ['html','css','typeScript','OOP','react'];
 
-    const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel,techPuls]; 
-            
+    const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess];    
+    
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'
         item.style.filter = 'grayscale(1)'
-
     }
+
     const hideItem = (item,i) => {
         item.style.transform = 'scale(1)'
         item.style.filter = 'grayscale(0)'
     }
 
-    allTech.forEach(itemAll=>{
-        itemAll.addEventListener('mouseover',()=>{
-            portfolioItemTechs.forEach((itemPort,i)=>{
-                itemPort.forEach(iP=>{
-                    if (iP == itemAll.getAttribute('data-tech')){
-                        showItem(portfolioItems[i],i)
-                    }
+    const technologiesShow = (tech)=>{
+        tech.forEach(itemAll=>{
+            itemAll.addEventListener('mouseover',()=>{
+                portfolioItemTechs.forEach((itemPort,i)=>{
+                    itemPort.forEach(iP=>{
+                        if (iP == itemAll.getAttribute('data-tech')){
+                            showItem(portfolioItems[i],i)
+                        }
+                    })
+                })
+            })
+            itemAll.addEventListener('mouseout',()=>{
+                portfolioItemTechs.forEach((itemPort,i)=>{
+                    itemPort.forEach(iP=>{
+                        if (iP == itemAll.getAttribute('data-tech')){
+                            hideItem(portfolioItems[i],i)
+                        }
+                    })
                 })
             })
         })
-        itemAll.addEventListener('mouseout',()=>{
-            portfolioItemTechs.forEach((itemPort,i)=>{
-                itemPort.forEach(iP=>{
-                    if (iP == itemAll.getAttribute('data-tech')){
-                        hideItem(portfolioItems[i],i)
-                    }
-                })
-            })
-        })
+    }
 
-    })
-
-
-
-
-
-    
-
-
+    technologiesShow(allTech)
 
 
     // Portfolio description Modal 
@@ -143,30 +143,40 @@ window.addEventListener('DOMContentLoaded',()=>{
                 duration: 700
             })
     }
-    portfolioItems.forEach((item,i)=>{
-        item.addEventListener('mouseover',()=>{
-            portfolioItemDescriptions[i].style.display='block';
-            portfolioItemDescriptions[i].style.opacity='1';
-            animateDescrManualy(portfolioItemDescriptions[i]);
+
+    const descrShow = ()=>{
+        portfolioItems.forEach((item,i)=>{
+            item.addEventListener('mouseover',()=>{
+                portfolioItemDescriptions[i].style.display='block';
+                portfolioItemDescriptions[i].style.opacity='1';
+                animateDescrManualy(portfolioItemDescriptions[i]);
+            })
         })
-    })
-    portfolioItems.forEach((item,i)=>{
-        item.addEventListener('mouseout',()=>{
-            portfolioItemDescriptions[i].style.display='none';
-            portfolioItemDescriptions[i].style.opacity='0'
+        portfolioItems.forEach((item,i)=>{
+            item.addEventListener('mouseout',()=>{
+                portfolioItemDescriptions[i].style.display='none';
+                portfolioItemDescriptions[i].style.opacity='0'
+            })
         })
-    })
-    portfolioItemDescriptions.forEach((item,i)=>{
-        item.addEventListener('mouseover',()=>{
-            portfolioItemDescriptions[i].style.display='block';
-            portfolioItemDescriptions[i].style.opacity='1';
+        portfolioItemDescriptions.forEach((item,i)=>{
+            item.addEventListener('mouseover',()=>{
+                portfolioItemDescriptions[i].style.display='block';
+                portfolioItemDescriptions[i].style.opacity='1';
+            })
         })
-    })
-    portfolioItemDescriptions.forEach((item,i)=>{
-        item.addEventListener('mouseout',()=>{
-            portfolioItemDescriptions[i].style.display='none';
+        portfolioItemDescriptions.forEach((item,i)=>{
+            item.addEventListener('mouseout',()=>{
+                portfolioItemDescriptions[i].style.display='none';
+            })
         })
-    })
+    }
+    descrShow()
+
+   
+
+
+
+
 });
 
 

@@ -1,4 +1,43 @@
 .portfolio{
+    .card {
+        width: 373px;
+        height: 254px;
+        background: #07182E;
+        position: absolute;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+        h2 {
+            z-index: 1;
+            color: white;
+            font-size: 2em;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 373px;
+            background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+            height: 130%;
+            animation: rotBGimg 3s linear infinite;
+            transition: all 0.2s linear;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background: #07182E;
+            inset: 5px;
+            border-radius: 15px;
+        }
+        &:hover {
+            &:before {
+                background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+                animation: rotBGimg 3.5s linear infinite;
+            }
+        }
+    }
+
     padding-top: 120px;
     background-image: radial-gradient(circle closest-side at 82vw 24vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0,0.3) 100%);
     min-height: 1220px;
@@ -50,10 +89,10 @@
             display: none;
             background-color: rgb(234, 164, 94);
             border-radius: 5%;
-            padding: 5px;
+            padding: 9px;
             margin: 5px;
             border: solid 4px rgb(227, 154, 81);
-            color: black;
+            color: rgb(247, 243, 243);
             text-align: left;
             font-size: 16px;
             z-index: 1000;
@@ -64,6 +103,11 @@
             opacity: 0;
             transition: all 1s;
             cursor: pointer;
+            .en, .ru{
+                position: relative;
+                z-index: 999;
+            }
+            
             &_marvel{
                 top:400px
             }
@@ -77,6 +121,10 @@
                 left:382px;
                 top:400px
             }
+            &_chess{
+                left:770px;
+                top:400px
+            }
             &_title{
                 display: block;
                 text-align: center;
@@ -85,4 +133,58 @@
         }
     }
 }
+@keyframes rotBGimg {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 
+
+.card_techs {
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  
+  .card_techs:hover {
+    color: black;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+    background-color: #dfdfdf;
+    transition: all .5s;
+  }
+  
+  .secondAnimation {
+    --hoverContorno: #959595;
+  }
+  
+  .secondAnimation:hover,
+  .secondAnimation:focus {
+    -webkit-animation: cardAnimacion 1.4s;
+    animation: cardAnimacion 1.4s;
+    box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+    border-radius: 20px;
+  }
+  
+  @-webkit-keyframes cardAnimacion {
+    0% {
+      box-shadow: 0 0 0 0 var(--hoverContorno);
+    }
+  }
+  
+  @keyframes cardAnimacion {
+    0% {
+      box-shadow: 0 0 0 0 var(--hoverContorno);
+    }
+  }
+  
+  
+  
+  
