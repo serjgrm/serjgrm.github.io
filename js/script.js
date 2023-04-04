@@ -39,8 +39,8 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     // Portfolio description technologies used. 
 
-    const portfolioItems = document.querySelectorAll('.portfolio__item'),
-          portfolioItemDescriptions = document.querySelectorAll('.portfolio__item__descr');
+
+
 
     // const techUsedGenerallyArray = ['html','css','js','react','sass','scss','git',
     // 'bootstrap','responsive creation','photoshop','figma','flex','webpack','ajax','CRA','class components',
@@ -95,8 +95,8 @@ window.addEventListener('DOMContentLoaded',()=>{
           techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy'],
           techChess = ['html','css','typeScript','OOP','react'];
 
-    const portfolioItemTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess];    
-    
+    const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess];    
+
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'
         item.style.filter = 'grayscale(1)'
@@ -107,10 +107,10 @@ window.addEventListener('DOMContentLoaded',()=>{
         item.style.filter = 'grayscale(0)'
     }
 
-    const technologiesShow = (tech)=>{
+    const technologiesShowProject = (tech)=>{
         tech.forEach(itemAll=>{
             itemAll.addEventListener('mouseover',()=>{
-                portfolioItemTechs.forEach((itemPort,i)=>{
+                portfolioItemsTechs.forEach((itemPort,i)=>{
                     itemPort.forEach(iP=>{
                         if (iP == itemAll.getAttribute('data-tech')){
                             showItem(portfolioItems[i],i)
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded',()=>{
                 })
             })
             itemAll.addEventListener('mouseout',()=>{
-                portfolioItemTechs.forEach((itemPort,i)=>{
+                portfolioItemsTechs.forEach((itemPort,i)=>{
                     itemPort.forEach(iP=>{
                         if (iP == itemAll.getAttribute('data-tech')){
                             hideItem(portfolioItems[i],i)
@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         })
     }
 
-    technologiesShow(allTech)
+    technologiesShowProject(allTech)
 
 
     // Portfolio description Modal 
@@ -143,6 +143,13 @@ window.addEventListener('DOMContentLoaded',()=>{
                 duration: 700
             })
     }
+
+
+    const portfolioItems = document.querySelectorAll('.portfolio__item'),
+          portfolioItemDescriptions = document.querySelectorAll('.portfolio__item__descr');
+
+
+
 
     const descrShow = ()=>{
         portfolioItems.forEach((item,i)=>{
@@ -172,11 +179,41 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
     descrShow()
 
-   
 
 
 
 
+
+    // After hover on Portfolio image function technologiesShow will show all 
+    // technologies use during project creation
+    const technologiesShow = (num)=>{
+        allTech.forEach(((techFromAll,i)=>{
+            portfolioItemsTechs[num].forEach((targetTech,j)=>{
+                if(techFromAll.getAttribute('data-tech') === targetTech){
+                    techFromAll.style.color = 'red';
+                    techFromAll.style.fontSize = '23px';
+                    
+                }
+            })
+        }))
+    }
+    const technologiesHide = (num)=>{
+        allTech.forEach(((techFromAll,i)=>{
+            portfolioItemsTechs[num].forEach((targetTech,j)=>{
+                if(techFromAll.getAttribute('data-tech') === targetTech){
+                    techFromAll.style.color = '';
+                    techFromAll.style.fontSize = '';
+
+                }
+            })
+        }))
+    }
+    portfolioItems.forEach((item,i)=>{
+        item.addEventListener('mouseover',()=>technologiesShow(i))
+    })
+    portfolioItems.forEach((item,i)=>{
+        item.addEventListener('mouseout',()=>technologiesHide(i))
+    })
 });
 
 

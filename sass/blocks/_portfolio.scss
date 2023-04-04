@@ -48,6 +48,7 @@
     min-height: 1220px;
     [data-tech]{
         cursor: pointer;
+        transition: all 0.5s;
         &:hover{
             color: #1E90FF;
         }
