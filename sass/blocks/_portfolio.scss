@@ -73,7 +73,7 @@
         height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 373px);
+        grid-template-rows: repeat(auto, 373px);
         gap: 15px;
     }
     &__item{
@@ -129,6 +129,9 @@
             &_chess{
                 left:770px;
                 top:400px
+            }
+            &_redux{
+                top: 800px;
             }
             &_title{
                 display: block;

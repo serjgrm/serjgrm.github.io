@@ -15,15 +15,14 @@
         }
 
     }
-
     .portfolio {
         .card{
             width: 280px;
         }
         &__wrapper {
-            grid-template: repeat(2, 280px) /repeat(3, 280px);
+            grid-template: repeat(auto, 280px) /repeat(auto, 280px);
             justify-content: space-between;
-            row-gap: 50px;
+            row-gap: 40px;
         }
         &__item {
             img {
@@ -34,7 +33,6 @@
             &__descr{
                 width: 280px;
                 font-size: 12px;
-                // height: 220px;
                 &_uber{
                     left: -5px;
                 }
@@ -53,7 +51,9 @@
                 &_chess{
                     left: 676px;
                 }
-              
+                &_redux{
+                    top: 640px
+                }
             }
         }
     }
@@ -118,6 +118,10 @@
                 &_chess{
                     left: 400px;
                     top: 700px;
+                }
+                &_redux{
+                    top: 1000px;
+                    left: 26px;
 
                 }
             }
@@ -157,6 +161,11 @@
             &_chess{
                 left: 265px;
                 top: 600px
+            }
+            &_redux{
+                left: -26px;
+                top: 840px
+
             }
         }
     }
@@ -214,6 +223,11 @@
                 left: 50%;
                 transform: translateX(-53%);
                 top: 1400px;
+            }
+            &_redux{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 1700px;
             }
         }
     }

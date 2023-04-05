@@ -37,17 +37,9 @@ window.addEventListener('DOMContentLoaded',()=>{
     window.addEventListener('scroll',hideLinks);
 
 
-    // Portfolio description technologies used. 
 
-
-
-
-    // const techUsedGenerallyArray = ['html','css','js','react','sass','scss','git',
-    // 'bootstrap','responsive creation','photoshop','figma','flex','webpack','ajax','CRA','class components',
-    // 'function components', 'jsx', 'setState', 'Life cycle hooks', 'API', 'React hooks', 'Custom hooks', 
-    // 'React router', 'React-helmet', 'Finite state machine'
-    // ];
-
+    
+    // Portfolio 
     const html = document.querySelector('[data-tech="html"]'),
           css = document.querySelector('[data-tech="css"]'),
           js = document.querySelector('[data-tech="js"]'),
@@ -78,13 +70,15 @@ window.addEventListener('DOMContentLoaded',()=>{
           finiteStateMachine = document.querySelector('[data-tech="finite-state-machine"]'),
           jQuery = document.querySelector('[data-tech="jQuery"]'),
           typeScript = document.querySelector('[data-tech="typeScript"]'),
-          OOP = document.querySelector('[data-tech="OOP"]');
+          OOP = document.querySelector('[data-tech="OOP"]'),
+          redux = document.querySelector('[data-tech="redux"]');
+
 
 
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
             reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery,typeScript,
-            OOP
+            OOP,redux
         ];
 
     const techUber = ['BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
@@ -93,18 +87,17 @@ window.addEventListener('DOMContentLoaded',()=>{
           techMarvel = ['scss','setState','css','git','react','js','life-cycle-hooks','function-components','API', 'react-hooks', 'custom-hooks', 
           'react-router', 'react-helmet', 'finite-state-machine','class-components','jsx','responsive-creation'],
           techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy'],
-          techChess = ['html','css','typeScript','OOP','react'];
+          techChess = ['html','css','typeScript','OOP','react'],
+          techRedux = ['react','redux','html','css','js'];
 
-    const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess];    
+    const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess,techRedux];    
 
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'
-        item.style.filter = 'grayscale(1)'
     }
 
     const hideItem = (item,i) => {
-        item.style.transform = 'scale(1)'
-        item.style.filter = 'grayscale(0)'
+        item.style.transform = ''
     }
 
     const technologiesShowProject = (tech)=>{
@@ -129,7 +122,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             })
         })
     }
-
     technologiesShowProject(allTech)
 
 
@@ -147,7 +139,6 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     const portfolioItems = document.querySelectorAll('.portfolio__item'),
           portfolioItemDescriptions = document.querySelectorAll('.portfolio__item__descr');
-
 
 
 
@@ -191,8 +182,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             portfolioItemsTechs[num].forEach((targetTech,j)=>{
                 if(techFromAll.getAttribute('data-tech') === targetTech){
                     techFromAll.style.color = 'red';
-                    techFromAll.style.fontSize = '23px';
-                    
+                    techFromAll.style.fontSize = '23px';  
                 }
             })
         }))
