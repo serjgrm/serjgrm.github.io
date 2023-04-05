@@ -36,10 +36,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
     window.addEventListener('scroll',hideLinks);
 
-
-
-    
-    // Portfolio 
+    // Portfoli
     const html = document.querySelector('[data-tech="html"]'),
           css = document.querySelector('[data-tech="css"]'),
           js = document.querySelector('[data-tech="js"]'),
