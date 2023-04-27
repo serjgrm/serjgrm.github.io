@@ -133,6 +133,10 @@
             &_redux{
                 top: 800px;
             }
+            &_reduxTk {
+                top: 800px;
+                left:382px;
+            }
             &_title{
                 display: block;
                 text-align: center;
@@ -149,7 +153,6 @@
 		transform: rotate(360deg);
 	}
 }
-
 
 .card_techs {
     color: white;
