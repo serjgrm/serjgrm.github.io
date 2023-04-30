@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded',()=>{
           techPuls = ['scss','jQuery','BEM','bootstrap','js','html','css','responsive-creation','photoshop', 'flex', 'git','marcy'],
           techChess = ['html','css','typeScript','OOP','react'],
           techRedux = ['react','redux','html','css','js'],
-          techReduxTk = ['react','reduxTk','html','css','js','axios'];
+          techReduxTk = ['react','reduxTk','html','css','js','axios','typeScript'];
 
     const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess,techRedux,techReduxTk];    
 
