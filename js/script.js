@@ -71,6 +71,7 @@ window.addEventListener('DOMContentLoaded',()=>{
           redux = document.querySelector('[data-tech="redux"]'),
           reduxTk = document.querySelector('[data-tech="reduxTk"]'),
           graphql = document.querySelector('[data-tech="graphql"]'),
+          apollo = document.querySelector('[data-tech="apollo"]'),
           axios = document.querySelector('[data-tech="axios"]');
 
 
@@ -80,7 +81,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
             reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery,typeScript,
-            OOP,redux,reduxTk,axios, graphql
+            OOP,redux,reduxTk,axios, graphql,apollo
         ];
 
     const techUber = ['BEM','bootstrap','js','html','css','responsive-creation','sass','photoshop', 'flex', 'git','marcy'],
@@ -92,7 +93,7 @@ window.addEventListener('DOMContentLoaded',()=>{
           techChess = ['html','css','typeScript','OOP','react'],
           techRedux = ['react','redux','html','css','js'],
           techReduxTk = ['react','reduxTk','html','css','js','axios','typeScript'],
-          techGraphQl = ['react','html','css','js','graphql'];
+          techGraphQl = ['react','html','css','js','graphql','apollo'];
 
 
     const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess,techRedux,techReduxTk,techGraphQl];    
