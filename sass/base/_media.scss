@@ -62,6 +62,10 @@
                     top: 640px;
                     left: 645px;
                 }
+                &_graphql2 {
+                    top: 1000px;
+                    left: -5px;
+                }
             }
         }
     }
@@ -138,6 +142,10 @@
                     top: 1300px;
                     left: 26px;
                 }
+                &_graphql2{
+                    top: 1300px;
+                    left: 400px;
+                }
             }
         }
     }
@@ -187,6 +195,10 @@
             &_graphql{
                 top: 1150px;
                 left: -26px;
+            }
+            &_graphql2 {
+                top: 1150px;
+                left: 265px;
             }
         }
     }
@@ -259,6 +271,11 @@
                 left: 50%;
                 transform: translateX(-53%);
                 top: 2270px;
+            }
+            &_graphql2{
+                left: 50%;
+                transform: translateX(-53%);
+                top: 2570px;
             }
         }
     }
