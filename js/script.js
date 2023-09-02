@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
     window.addEventListener('scroll',hideLinks);
 
-    // Portfoli
+    // Portfolio
     const html = document.querySelector('[data-tech="html"]'),
           css = document.querySelector('[data-tech="css"]'),
           js = document.querySelector('[data-tech="js"]'),
@@ -76,10 +76,6 @@ window.addEventListener('DOMContentLoaded',()=>{
           styleComponents = document.querySelector('[data-tech="styled-components"]');
 
 
-
-
-
-
     const allTech = [html,css,js,react,sass,scss,git,bootstrap,responsiveCreation,
             photoshop,figma,marcy,flex,webpack,ajax,CRA,jsx,setState,lifeCycleHooks,functionComponents,API,
             reactHooks,customHooks,reactRouter,reactHelmet,finiteStateMachine,classComponents,BEM,jQuery,typeScript,
@@ -96,35 +92,37 @@ window.addEventListener('DOMContentLoaded',()=>{
           techRedux = ['react','redux','html','css','js'],
           techReduxTk = ['react','reduxTk','html','css','js','axios','typeScript'],
           techGraphQl = ['react','html','css','js','graphql','apollo'],
-          techhotAnime = ['react','html','css','typeScript','graphql','apollo','styled-components'];
+          techhotAnime = ['react','html','css','typeScript','graphql','apollo','styled-components'],
+          techPortfolio = ['html','css','js','responsive-creation','scss','flex','git','BEM'];
 
 
-
-    const portfolioItemsTechs = [techUber,techFood,techCRUD,techMarvel,techPuls,techChess,techRedux,techReduxTk,techGraphQl,techhotAnime];    
+    const portfolioItemsTechs = [techUber,techFood,techCRUD,techPortfolio,techMarvel,techPuls,techChess,techRedux,techReduxTk,techGraphQl,techhotAnime];   
 
     const showItem = (item,i) => {
         item.style.transform = 'scale(1.1)'
+        item.style.border = 'solid red 3px'
     }
     const hideItem = (item,i) => {
         item.style.transform = ''
+        item.style.border = ''
     }
 
     const technologiesShowProject = (tech)=>{
         tech.forEach(itemAll=>{
-            itemAll.addEventListener('mouseover',()=>{
+            let count = 0;     
+            itemAll.addEventListener('click',()=>{
+                count++
+                console.log(count);
                 portfolioItemsTechs.forEach((itemPort,i)=>{
                     itemPort.forEach(iP=>{
                         if (iP == itemAll.getAttribute('data-tech')){
-                            showItem(portfolioItems[i],i)
-                        }
-                    })
-                })
-            })
-            itemAll.addEventListener('mouseout',()=>{
-                portfolioItemsTechs.forEach((itemPort,i)=>{
-                    itemPort.forEach(iP=>{
-                        if (iP == itemAll.getAttribute('data-tech')){
-                            hideItem(portfolioItems[i],i)
+                            if (count%2==0){
+                                hideItem(portfolioItems[i],i)
+                                itemAll.style.color = ''
+                            } else {
+                                showItem(portfolioItems[i],i)
+                                itemAll.style.color = '#1E90FF'
+                            }
                         }
                     })
                 })
@@ -134,60 +132,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     technologiesShowProject(allTech)
 
 
-    // Portfolio description Modal 
-    const animateDescrManualy = (item) =>{
-            item.animate([
-                {opacity:0},
-                {opacity:1}
-            ],{
-                iterations:1,
-                duration: 700
-            })
-    }
-
-
-    const portfolioItems = document.querySelectorAll('.portfolio__item'),
-          portfolioItemDescriptions = document.querySelectorAll('.portfolio__item__descr');
-
-
-
-    const descrShow = ()=>{
-        portfolioItems.forEach((item,i)=>{
-            item.addEventListener('mouseover',()=>{
-                portfolioItemDescriptions[i].style.display='block';
-                portfolioItemDescriptions[i].style.opacity='1';
-                animateDescrManualy(portfolioItemDescriptions[i]);
-            })
-        })
-        portfolioItems.forEach((item,i)=>{
-            item.addEventListener('mouseout',()=>{
-                portfolioItemDescriptions[i].style.display='none';
-                portfolioItemDescriptions[i].style.opacity='0'
-            })
-        })
-        portfolioItemDescriptions.forEach((item,i)=>{
-            item.addEventListener('mouseover',()=>{
-                portfolioItemDescriptions[i].style.display='block';
-                portfolioItemDescriptions[i].style.opacity='1';
-            })
-        })
-        portfolioItemDescriptions.forEach((item,i)=>{
-            item.addEventListener('mouseout',()=>{
-                portfolioItemDescriptions[i].style.display='none';
-                portfolioItemDescriptions[i].style.opacity='0';
-            })
-        })
-    }
-    
-    descrShow()
-
-
-
-
-
-
-    // After hover on Portfolio image function technologiesShow will show all 
-    // technologies use during project creation
+    const portfolioItems = document.querySelectorAll('.portfolio__item');
     const technologiesShow = (num)=>{
         allTech.forEach(((techFromAll,i)=>{
             portfolioItemsTechs[num].forEach((targetTech,j)=>{
@@ -204,16 +149,21 @@ window.addEventListener('DOMContentLoaded',()=>{
                 if(techFromAll.getAttribute('data-tech') === targetTech){
                     techFromAll.style.color = '';
                     techFromAll.style.fontSize = '';
-
                 }
             })
         }))
     }
+    let techConter = 0;
     portfolioItems.forEach((item,i)=>{
-        item.addEventListener('mouseover',()=>technologiesShow(i))
-    })
-    portfolioItems.forEach((item,i)=>{
-        item.addEventListener('mouseout',()=>technologiesHide(i))
+            console.log(techConter);
+            item.addEventListener('click',()=>{
+                techConter++;
+                if(techConter%2==0){
+                    technologiesHide(i)
+                } else{
+                    technologiesShow(i)
+                }
+            })
     })
 });
 
