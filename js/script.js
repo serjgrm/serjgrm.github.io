@@ -44,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Portfolio cards interaction
     (()=>{
+
         const html = document.querySelector('[data-tech="html"]'),
         css = document.querySelector('[data-tech="css"]'),
         js = document.querySelector('[data-tech="js"]'),
@@ -165,8 +166,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
     })()
-
-
+    
 });
 
 

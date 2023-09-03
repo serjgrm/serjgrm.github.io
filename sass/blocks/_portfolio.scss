@@ -1,4 +1,6 @@
 .portfolio{
+    display: flex;
+    flex-wrap: wrap;
     &__item{
         cursor: pointer;
         text-decoration: none;
@@ -46,7 +48,7 @@
 
 .card_techs {
     color: white;
-    margin-top: 40px;
+    margin: 40px 25px 0;
     padding: 20px;
     background: rgb(0, 0, 0);
     border: 2px solid rgb(255, 255, 255);
@@ -94,15 +96,12 @@ $color_1: #fff;
 	}
 }
 .portfolio__container {
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
     margin: 30px auto 0;
-
     width: 1140px;
-
 	.card {
 		position: relative;
 		width: 300px;
