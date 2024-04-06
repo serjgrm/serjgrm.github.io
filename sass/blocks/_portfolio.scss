@@ -1,251 +1,241 @@
-.portfolio{
-    display: flex;
-    flex-wrap: wrap;
-    &__item{
-        cursor: pointer;
-        text-decoration: none;
-        transition: all 1s;
-        img {
-            width: 373px;
-            height: 373px;
-            object-fit: cover;
-            border-radius: 5%;
-            transition: all .7s;
-            z-index: 5;
-            &:hover{
-                transform: scale(1.04);
-            }
-        }
-    }
-
-    &__links{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    [data-tech]{
-        cursor: pointer;
-        transition: all 0.5s;
-        &:hover {
-            color: #1E90FF;
-        }
-    }
-    .divider {
-        @include divider;
-        margin: 0 auto;
-    }
-    .technologies{
-        margin-top: 20px;
-        font-size: 20px;
-    }
-    &__title{
-        text-align: center;
-        @include before_circle_center;
-    }
-    &__subtitle{
-        text-align: center;
-    }
-
-.card_techs {
-    color: white;
-    margin: 40px 25px 0;
-    padding: 20px;
-    background: rgb(0, 0, 0);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    cursor:pointer;
-  }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
   
-  .card_techs:hover {
-    color: black;
-    background: rgb(255, 255, 255);
-    border: 2px solid rgb(200, 200, 200);
-    border-radius: 20px;
-    background-color: #dfdfdf;
-    transition: all .5s;
-  }
- 
+  &__item {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+    
+    img {
+        width: 373px;
+        height: 373px;
+        object-fit: cover;
+        border-radius: 5%;
+        transition: all .7s;
+        z-index: 5;
+        
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
 }
+
+  &__links {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  [data-tech] {
+      cursor: pointer;
+      transition: all 0.5s;
+      
+      &:hover {
+        color: $hover-tech;
+      }
+  }
+
+  .divider {
+      @include divider;
+      margin: 0 auto;
+  }
+
+  .technologies {
+      margin-top: 20px;
+      font-size: 20px;
+  }
+
+  &__title {
+      text-align: center;
+      @include before_circle_center;
+  }
+
+  &__subtitle {
+      text-align: center;
+  }
+
+  .card_techs {
+      color: white;
+      margin: 40px 25px 0;
+      padding: 20px;
+      background: rgb(0, 0, 0);
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 20px;
+      cursor: pointer;
+  }
+
+  .card_techs:hover {
+      color: black;
+      background: rgb(255, 255, 255);
+      border: 2px solid rgb(200, 200, 200);
+      border-radius: 20px;
+      background-color: #dfdfdf;
+      transition: all .5s;
+  }
+}
+
 $color_1: #fff;
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .portfolio {
-    background-image: radial-gradient(circle closest-side at 33vw 45vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0,0.3) 100%);
+  background-image: radial-gradient(circle closest-side at 33vw 45vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0,0.3) 100%);
+  
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	
-	}
+  &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
 }
+
 .portfolio__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-    margin: 30px auto 0;
-    width: 1140px;
-	.card {
-		position: relative;
-		width: 300px;
-		height: 400px;
-		background: rgba(255, 255, 255, 0.05);
-        background-size: cover; 
-        background-repeat: no-repeat; 
-		margin: 20px;
-		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-		border-radius: 15px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		backdrop-filter: blur(10px);
-        padding: 0 20px;
-        &__uber{
-            background-image: url('../img/works/uber.webp'); 
-        }
-        &__food{
-            background-image: url('../img/works/bread.webp'); 
-        }
-        &__puls{
-            background-image: url('../img/works/puls.webp'); 
-        }
-        &__crud{
-            background-image: url('../img/works/crud.webp'); 
-        }
-        &__portfolio{
-            background-image: url('../img/BG_1.jpeg'); 
-        }
-       
-        &__marvel{
-            background-image: url('../img/works/marvel.webp'); 
-            .sci {
-                li {
-                    transform: translateY(50px) !important;
-                }
-            }
-            &:hover{
-                .content {
-                    transform: translateY(-20px) !important;
-                }
-                .sci {
-                    li {
-                        transform: translateY(20px) !important;
-                    }
-                }
-            }
-        }
-        &__redux{
-            background-image: url('../img/works/reduxSkills.webp'); 
-        }
-        &__reduxTk{
-            .sci {
-                li {
-                    transform: translateY(40px) !important;
-                }
-            }
-            &:hover{
-                .sci {
-                    li {
-                        transform: translateY(20px) !important;
-                    }
-                }
-            }
-        }
-        &__graphql{
-            background-image: url('../img/works/graphql.webp'); 
-        }
-        &__chess{
-            background-image: url('../img/works/chess.webp'); 
-        }
-        &__hotAnime{
-            background-image: url('../img/works/hotAnime.webp'); 
-        }
-		.content {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			transition: 0.5s;
-            transform: translateY(20px);
-            opacity: 0;
-			.contentBx {
-                color: $color_1;
-                &_black{
-                    color:black;
-                }
-                .card__descr{
-                    text-align: justify-all;
-                    width: 100%;
-                }
-				h3 {
-					text-transform: uppercase;
-					letter-spacing: 2px;
-					font-weight: 500;
-					font-size: 18px;
-					margin: 20px 0 10px;
-                    text-align: center;
-					line-height: 1.1em;
-					span {
-						font-size: 12px;
-						font-weight: 300;
-						text-transform: initial;
-					}
-				}
-			}
-		}
-		&:hover {
-			.content {
-                transform: translateY(-20px);
-                opacity: 1;
-			}
-			.sci {
-				li {
-					transform: translateY(-20px);
-					opacity: 1;
-                    :hover{
-                        color:#1E90FF;
-                    }
-				}
-			}
-		}
-		.sci {
-			position: absolute;
-			bottom: 50px;
-			display: flex;
-			li {
-				list-style: none;
-				margin: 0 10px;
-				transform: translateY(20px);
-				transition: 0.5s;
-				opacity: 0;
-                color: black;            
-				a {
-					color: $color_1;
-					font-size: 20px;
-                    text-decoration: none;
-                    font-size: 15px;
-				}
-                .a_black {
-                    color:black;
-                }
-			}
-		}
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px auto 0;
+  width: 1140px;
+
+  .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.05);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      padding: 0 20px;
+      
+      &__uber {
+          background-image: url('../img/works/uber.webp');
+      }
+
+      &__food {
+          background-image: url('../img/works/bread.webp');
+      }
+
+      &__puls {
+          background-image: url('../img/works/puls.webp');
+      }
+
+      &__chess {
+          background-image: url('../img/works/chess.webp');
+      }
+
+      &__myBike {
+          background-image: url('../img/works/myBike.webp');
+      }
+
+      &__crud {
+          background-image: url('../img/works/crud.webp');
+      }
+
+      &__smart-vision {
+        background-image: url('../img/works/smart-vision.webp');
+      }
+
+
+      .content {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          transition: 0.5s;
+          transform: translateY(20px);
+          opacity: 0;
+
+          .contentBx {
+              color: $color_1;
+              
+              &_black {
+                  color: black;
+              }
+
+              .card__descr {
+                  text-align: justify-all;
+                  width: 100%;
+              }
+
+              h3 {
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  font-weight: 500;
+                  font-size: 18px;
+                  margin: 20px 0 10px;
+                  text-align: center;
+                  line-height: 1.1em;
+
+                  span {
+                      font-size: 12px;
+                      font-weight: 300;
+                      text-transform: initial;
+                  }
+              }
+          }
+      }
+
+      &:hover {
+          .content {
+              transform: translateY(-20px);
+              opacity: 1;
+          }
+
+          .sci {
+              li {
+                  transform: translateY(-20px);
+                  opacity: 1;
+
+                  a:hover {
+                    color: $hover-tech !important;
+                    transition: 0.3s all;
+                  }
+                  
+              }
+          }
+      }
+
+      .sci {
+          position: absolute;
+          bottom: 50px;
+          display: flex;
+
+          li {
+              list-style: none;
+              margin: 0 10px;
+              transform: translateY(20px);
+              transition: 0.5s;
+              opacity: 0;
+              color: black;
+
+              a {
+                  color: $color_1;
+                  font-size: 20px;
+                  text-decoration: none;
+                  font-size: 15px;
+              }
+          }
+      }
+  }
 }
+

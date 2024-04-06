@@ -27,6 +27,25 @@ body{
 .ru {
     animation: langShift 1s ease-in 1;
 }
+
+.active-card {
+  transform: scale(1.1);
+  border: solid red 3px;
+}
+
+.active-tech {
+  color: red;
+  font-size: 23px;
+}
+
+.hover-tech {
+  color: $hover-tech;
+}
+
+.black {
+  color:black !important;
+}
+
 @keyframes langShift {
     from {
         opacity: 0.5;

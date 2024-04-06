@@ -12,7 +12,8 @@
     }
     &__link{
         &:hover{
-            svg path{
+            svg path {
+                transition: 0.3s all;
                 fill:#1E90FF	;
             }
         }

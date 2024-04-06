@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serjgrm/serjgrm.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serjgrm/serjgrm.github.io/issues"
+  },
+  "homepage": "https://github.com/serjgrm/serjgrm.github.io#readme",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.3.1"
+  }
+}

@@ -13,10 +13,11 @@
         position: relative;
         left: 4px
     }
-    &__link{
-        &:hover{
-            svg path{
-                fill:#1E90FF	;
+    &__link {
+        &:hover {
+            svg path {
+              transition: 0.3s all;
+              fill:#1E90FF	;
             }
         }
     }
