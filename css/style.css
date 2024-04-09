@@ -335,93 +335,13 @@ body {
   fill: #1E90FF;
 }
 
-.about {
-  padding: 120px 0;
-  background-image: radial-gradient(circle closest-side at 33vw 45vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0, 0.3) 100%);
-}
-.about .about-grid {
-  display: grid;
-  grid-template: repeat(2, minmax(300px, auto))/400px minmax(auto, 740px);
-  gap: 40px;
-}
-.about .about-grid .descr {
-  text-align: justify;
-}
-.about .about-grid .about__photo {
-  grid-row: 1/3;
-}
-.about .about-grid .about__photo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.about .about-grid .about__name .name_subtitle {
-  position: relative;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  padding-left: 10px;
-}
-.about .about-grid .about__name .name_subtitle:before {
-  content: "";
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 136, 0, 0.7);
-  position: absolute;
-  border-radius: 100%;
-  z-index: -1;
-  left: 0;
-  top: -7px;
-}
-.about .about-grid .about__name .name_title {
-  margin-top: 15px;
-}
-.about .about-grid .about__name .name_line {
-  margin-top: 15px;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(255, 136, 0, 0.7);
-}
-.about .about-grid .about__name .name_descr {
-  margin-top: 20px;
-}
-.about .about-grid .about__skills {
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-.about .about-grid .about__skills .about__skills-item {
-  position: relative;
-}
-.about .about-grid .about__skills .about__skills-item .skill_descr {
-  margin-top: 20px;
-}
-.about .about-grid .about__skills .about__skills-item .skill_subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  padding-left: 10px;
-}
-.about .about-grid .about__skills .about__skills-item .skill_subtitle:before {
-  content: "";
-  width: 36px;
-  height: 36px;
-  background-color: rgba(255, 136, 0, 0.7);
-  position: absolute;
-  border-radius: 100%;
-  z-index: -1;
-  left: 0;
-  top: -7px;
-}
-
 .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 120px 0;
 }
 .portfolio__item {
   cursor: pointer;
